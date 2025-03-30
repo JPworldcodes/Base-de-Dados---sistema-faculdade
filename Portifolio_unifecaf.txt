@@ -1,0 +1,131 @@
+﻿Projeto:
+
+
+Os proprietários de uma faculdade precisam de um sistema que viabilize o armazenamento de informações sobre seus alunos, cursos, matérias e professores. O objetivo é criar um banco de dados que ofereça suporte para que um sistema possa armazenar informações que atendam a necessidade do cliente.
+
+
+Respostas às questões:
+
+
+1. Quais são as principais necessidades dos clientes?
+
+
+a. Quais informações precisam ser armazenadas?
+
+
+- Informações sobre alunos (nome, matrícula, etc.)
+- Informações sobre cursos (nome, duração, etc.)
+- Informações sobre matérias (nome, créditos, etc.)
+- Informações sobre professores (nome, especialidade, etc.)
+
+
+b. Quais os dados precisam ser guardados?
+
+
+- Dados de alunos (nome, matrícula, etc.)
+- Dados de cursos (nome, duração, etc.)
+- Dados de matérias (nome, créditos, etc.)
+- Dados de professores (nome, especialidade, etc.)
+
+
+c. O que será feito com os dados posteriormente?
+
+
+- Os dados serão utilizados para montar turmas e realizar o armazenamento de notas dos alunos.
+
+
+2. Quais tabelas precisam ser criadas para que todas as informações sejam armazenadas?
+
+
+- Tabela Alunos
+- Tabela Cursos
+- Tabela Matérias
+- Tabela Professores
+- Tabela Turmas
+- Tabela Notas
+
+
+3. Quais atributos cada tabela deve ter?
+
+
+- Tabela Alunos: nome, matrícula, data_nascimento, etc.
+- Tabela Cursos: nome, duração, créditos, etc.
+- Tabela Matérias: nome, créditos, pré-requisitos, etc.
+- Tabela Professores: nome, especialidade, titulação, etc.
+- Tabela Turmas: nome, curso, matéria, professor, etc.
+- Tabela Notas: aluno, matéria, nota, etc.
+
+
+4. Qual o tipo de dados de cada atributo definido?
+
+
+- Tabela Alunos: nome (varchar), matrícula (int), data_nascimento (date), etc.
+- Tabela Cursos: nome (varchar), duração (int), créditos (int), etc.
+- Tabela Matérias: nome (varchar), créditos (int), pré-requisitos (varchar), etc.
+- Tabela Professores: nome (varchar), especialidade (varchar), titulação (varchar), etc.
+- Tabela Turmas: nome (varchar), curso (int), matéria (int), professor (int), etc.
+- Tabela Notas: aluno (int), matéria (int), nota (float), etc.
+
+
+5. Quais são os relacionamentos a serem criados entre as tabelas?
+
+
+- Um aluno pode estar matriculado em várias turmas (relacionamento many-to-many).
+- Uma turma é composta por um curso, uma matéria e um professor (relacionamento many-to-one).
+- Um professor pode lecionar várias matérias (relacionamento many-to-many).
+- Uma matéria pode ter vários pré-requisitos (relacionamento many-to-many).
+
+
+Modelo Conceitual:
+
+
+O modelo conceitual é apresentado abaixo:
+
+
+Alunos
+
+
+- nome
+- matrícula
+- data_nascimento
+
+
+Cursos
+
+
+- nome
+- duração
+- créditos
+
+
+Matérias
+
+
+- nome
+- créditos
+- pré-requisitos
+
+
+Professores
+
+
+- nome
+- especialidade
+- titulação
+
+
+Turmas
+
+
+- nome
+- curso
+- matéria
+- professor
+
+
+Notas
+
+
+- aluno
+- matéria
+- nota
